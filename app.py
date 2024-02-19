@@ -10,9 +10,6 @@ order = 0       # Order of pixel colors (RGB or GRB)
 port = 0        # Network port
 pixels = 0      # Neopixel output data
 
-# TODO: Verify that config.json exists and if not,
-# prompt user for settings and write them to fil
-
 # Read configuration from config.json
 with open('config.json') as configFile:
     jsonData = json.load(configFile)
