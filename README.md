@@ -1,4 +1,7 @@
 # AmPiLight server
+### This program was made as final project for CS50x
+[Video demo](https://youtu.be/XjO_DUD1B1E)
+
 ### Description
 AmPiLight is a program that aims to do effect like Philips Ambilight, but using RaspberryPi as NeoPixel LED controller.
 
