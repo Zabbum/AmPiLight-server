@@ -3,7 +3,7 @@
 AmPiLight is a program that aims to do effect like Philips Ambilight, but using RaspberryPi as NeoPixel LED controller.
 
 ## Installation, configuration and running
-**Note that you will also need a [client side]() to make program work.**
+**Note that you will also need a [client side](https://github.com/Zabbum/AmPiLight-client) to make program work.**
 
 ### Installation
 1. Clone the repository and navigate to it.
