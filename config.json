@@ -1,0 +1,10 @@
+{
+    "dinPin": "D18",
+    "LEDAmount": {
+        "vertical": 10,
+        "horizontal": 16
+    },
+    "skipFirstPixel": true,
+    "RGBOrder": "GRB",
+    "port": 7602
+}
