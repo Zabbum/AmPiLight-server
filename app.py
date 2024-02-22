@@ -58,8 +58,8 @@ try:
                 pixels[pixel] = LEDdata[listIndex] # Send data to LED strip
 
         # Continue if bad data is sent
-        except (pickle.UnpicklingError, UnicodeDecodeError) as error:
-            print(f"Error {error} while unpickling or decoding data. Continuing.")
+        except (pickle.UnpicklingError, UnicodeDecodeError, TypeError) as error:
+            print(f"Error {error} while receiving data. Continuing.")
             continue
 
 # If user closes program, close program
