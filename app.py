@@ -2,6 +2,7 @@
 import board, neopixel
 import json
 import socket, pickle
+from helpers import terminateProgram
 
 # Global variables
 dinPin = 0      # GPIO pin that is connected to NeoPixel Din
@@ -66,22 +67,18 @@ try:
 except OSError as error:
     if error.errno == 9:
         print("Connection closed from client side.")
+        terminateProgram(clientSocket, serverSocket, pxAmount["sum"], pixels)
         exit()
     error
 
 # If program was not run as administrator
 except RuntimeError:
     print("You must run program as administrator!")
-    clientSocket.close()
-    serverSocket.close()
+    terminateProgram(clientSocket, serverSocket, pxAmount["sum"], pixels)
     exit(1)
 
 # If received terminate signal, end program casually.
 except KeyboardInterrupt:
     print("Received stop sygnal.")
-    try:
-        clientSocket.close()
-        serverSocket.close()
-    except NameError:
-        pass
+    terminateProgram(clientSocket, serverSocket, pxAmount["sum"], pixels)
     exit()
